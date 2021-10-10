@@ -10,11 +10,10 @@ const initialState = {
 };
 
 export const useHomeFetch = () => {
-
+    const [SearchTerm, setSearchTerm] = useState("");
     const [state, setState] = useState(initialState);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
-    const [SearchTerm, setSearchTerm] = useState("");
 
     const fetchMovies = async (page, searchTerm = "") => {
         try {
